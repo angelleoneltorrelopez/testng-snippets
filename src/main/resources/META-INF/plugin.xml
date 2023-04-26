@@ -1,11 +1,11 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>com.angel.torre.selenium-snippets</id>
+    <id>com.angel.torre.testng-snippets</id>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>Selenium-snippets</name>
+    <name>TestNG-snippets</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor email="angelleoneltorrelopez@gmail.com" url="https://www.ingenieriazeros.com">ingenieriazeros</vendor>
@@ -13,9 +13,17 @@
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
-    <description><![CDATA[
-    It is a collection of small predefined code snippets that covers different functions and common use cases using TestNG.
-  ]]></description>
+    <description><![CDATA[This plugin for IntelliJ of TestNG Snippets for Java is a tool designed to help developers write
+  tests more efficiently and quickly in Java projects that use TestNG as a testing framework. The plugin provides a
+  wide variety of predefined code snippets that cover TestNG annotations, test data configurations, common test cases,
+  assertions, and more.
+
+Users can easily select the relevant snippet and add it directly to their test code, saving time and reducing common
+syntax errors. Additionally, the plugin also offers autocomplete functions to suggest relevant snippets while writing
+test code, allowing developers to write more accurate and complete tests in less time.
+
+In summary, this TestNG Snippets plugin for IntelliJ is a valuable tool for any developer working with TestNG in Java
+projects, helping them increase efficiency and improve the quality of their tests.]]></description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->

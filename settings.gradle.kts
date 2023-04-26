@@ -1,1 +1,1 @@
-rootProject.name = "selenium-snippets"
+rootProject.name = "testng-snippets"
