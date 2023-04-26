@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="selenium-snippets:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/selenium_snippets_jar</output-path>
+    <root id="archive" name="selenium-snippets.jar" />
+  </artifact>
+</component>
