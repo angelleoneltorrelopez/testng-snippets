@@ -5,9 +5,9 @@
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:krita="http://krita.org/namespaces/svg/krita"
     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-    width="1826pt"
-    height="1908pt"
-    viewBox="0 0 1826 1908">
+    width="1024pt"
+    height="576pt"
+    viewBox="0 0 1024 576">
 <defs/>
-<path id="shape0" transform="translate(-72.0000000666382, -39.5979785211386)" fill="#ffffff" fill-rule="evenodd" d="M0 30.6045L0 2015.6L1989 2015.6L1939.2 0.25293C1939.2 -1.77051 1292.8 8.34669 0 30.6045Z" sodipodi:nodetypes="ccccc"/><path id="shape1" transform="translate(3.20103782268093, 2.06234382469615)" fill="#00b400" fill-rule="evenodd" d="M0.34174 1895.37C-0.832116 1266.68 1.48736 640.26 0.355327 11.5949C1.09981 5.4221 7.40578 0.290592 12.1344 0.251549C563.714 0.973949 1111.86 -0.537238 1663.49 0.217245C1672.38 0.228215 1679.01 9.44686 1674.83 17.8804C1517.96 235.039 1359.06 444.552 1202.3 661.688C1196.35 672.181 1183.38 669.652 1176.3 662.938C1118.26 599.138 1063.81 536.815 1003.54 471.699C1001.25 469.221 986.399 468.785 981.549 472.063C946.298 517.115 914.19 560.934 878.959 606.005C876.281 613.453 876.156 615.732 878.782 624.346C980.006 729.857 1083.62 832.938 1184.72 938.588C1185.82 938.911 1197.32 948.725 1209.13 935.031C1407.96 710.237 1598.87 499.748 1797.13 275.981C1804.51 267.652 1815.78 271.395 1815.8 282.061C1816.94 819.802 1817.91 1357.54 1819.05 1895.28C1817.55 1898.9 1818.83 1902.8 1807.05 1905.95C1716.73 1908.92 1117.92 1908.92 10.6317 1905.94C5.02612 1903.24 1.59612 1899.72 0.34174 1895.37Z" sodipodi:nodetypes="ccccccccccccccccccc"/><text id="shape2" krita:useRichText="true" krita:textVersion="2" transform="matrix(17.1428564913641 0 0 17.5999995533699 162.999891337848 1708.3987730771)" fill="#ffffff" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" font-family="Franklin Gothic Medium" font-size="72" font-size-adjust="0.190476" font-stretch="normal" letter-spacing="0" word-spacing="0"><tspan x="0">Se</tspan></text>
+<text id="shape0" krita:useRichText="true" krita:textVersion="2" transform="matrix(3.77091615177051 0 0 4.5178569253534 41.9999784699227 403.464257434976)" fill="#000000" stroke-opacity="0" stroke="#000000" stroke-width="0" stroke-linecap="square" stroke-linejoin="bevel" font-family="Verdana" font-size="72" font-size-adjust="0.222222" font-stretch="normal" letter-spacing="0" word-spacing="0"><tspan><tspan x="0">Test</tspan><tspan fill="#d00000">N</tspan><tspan fill="#ffea00">G</tspan></tspan></text>
 </svg>

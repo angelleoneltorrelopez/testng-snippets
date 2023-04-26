@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="testng-snippets:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/testng_snippets_jar</output-path>
+    <root id="archive" name="testng-snippets.jar" />
+  </artifact>
+</component>
