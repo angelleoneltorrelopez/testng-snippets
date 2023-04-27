@@ -1,11 +1,46 @@
-<templateSet group="testNG">
-    <template name="test" value="@org.testng.annotations.Test($PARAM$ = &quot;$DESCRIPTION$&quot;)&#10;public void $TEST_NAME$() {&#10;    org.testng.Assert.$assertTrue$($VARIABLE$, &quot;$STRING_MESSAGE$&quot;);&#10;$END$&#10;}" description="TestNG Test method" toReformat="true" toShortenFQNames="true">
-        <variable name="PARAM" expression="" defaultValue="&quot;description&quot;" alwaysStopAt="true" />
-        <variable name="DESCRIPTION" expression="" defaultValue="&quot;test description&quot;" alwaysStopAt="true" />
-        <variable name="TEST_NAME" expression="" defaultValue="&quot;testName&quot;" alwaysStopAt="true" />
-        <variable name="assertTrue" expression="" defaultValue="&quot;assertTrue&quot;" alwaysStopAt="true" />
+<templateSet group="TestNG">
+    <template name="afterMethod" value="@org.testng.annotations.AfterMethod&#10;public void $METHOD_NAME$(){&#10;    $END$&#10;}" description="TestNG AfterMehod annotation" toReformat="true" toShortenFQNames="true">
+        <variable name="METHOD_NAME" expression="" defaultValue="&quot;methodName&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="assertEquals" value="org.testng.Assert.assertEquals(&quot;$ACTUAL$&quot;, &quot;$EXPECTED$&quot;, &quot;$STRING_MESSAGE$&quot;);" description="TestNG Assert Equals" toReformat="true" toShortenFQNames="true">
+        <variable name="ACTUAL" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+        <variable name="EXPECTED" expression="" defaultValue="&quot;expected&quot;" alwaysStopAt="true" />
+        <variable name="STRING_MESSAGE" expression="" defaultValue="&quot;String message&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="assertFalse" value="org.testng.Assert.assertFalse($VARIABLE$, &quot;$STRING_MESSAGE$&quot;);" description="TestNG Assert False" toReformat="true" toShortenFQNames="true">
+        <variable name="VARIABLE" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true" />
+        <variable name="STRING_MESSAGE" expression="" defaultValue="&quot;String message&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="assertTrue" value="org.testng.Assert.assertTrue($VARIABLE$, &quot;$STRING_MESSAGE$&quot;);" description="TestNG Assert True" toReformat="true" toShortenFQNames="true">
         <variable name="VARIABLE" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
         <variable name="STRING_MESSAGE" expression="" defaultValue="&quot;String message&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="beforeMethod" value="@org.testng.annotations.BeforeMethod&#10;public void $METHOD_NAME$(){&#10;    $END$&#10;}" description="TestNG BeforeMehod annotation" toReformat="true" toShortenFQNames="true">
+        <variable name="METHOD_NAME" expression="" defaultValue="&quot;methodName&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="optional" value="@org.testng.annotations.Optional(&quot;$VARIABLE$&quot;)" description="TestNG Optional annotation" toReformat="true" toShortenFQNames="true">
+        <variable name="VARIABLE" expression="" defaultValue="&quot;variable&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="parameter" value="@org.testng.annotations.Parameters({&quot;$PARAMETER$&quot;})" description="TestNG Parameters annotation" toReformat="true" toShortenFQNames="true">
+        <variable name="PARAMETER" expression="" defaultValue="&quot;parameter&quot;" alwaysStopAt="true" />
         <context>
             <option name="JAVA_CODE" value="true" />
         </context>
@@ -22,38 +57,72 @@
             <option name="JAVA_CODE" value="true" />
         </context>
     </template>
-    <template name="afterMethod" value="@org.testng.annotations.AfterMethod&#10;public void $METHOD_NAME$(){&#10;    $END$&#10;}" description="TestNG AfterMehod annotation" toReformat="true" toShortenFQNames="true">
-        <variable name="METHOD_NAME" expression="" defaultValue="&quot;methodName&quot;" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_CODE" value="true" />
-        </context>
-    </template>
-    <template name="beforeMethod" value="@org.testng.annotations.BeforeMethod&#10;public void $METHOD_NAME$(){&#10;    $END$&#10;}" description="TestNG BeforeMehod annotation" toReformat="false" toShortenFQNames="true">
-        <variable name="METHOD_NAME" expression="" defaultValue="&quot;methodName&quot;" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_CODE" value="true" />
-        </context>
-    </template>
-    <template name="parameter" value="@org.testng.annotations.Parameters({&quot;$PARAMETER$&quot;})" description="TestNG Parameters annotation" toReformat="true" toShortenFQNames="true">
-        <variable name="PARAMETER" expression="" defaultValue="&quot;parameter&quot;" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_CODE" value="true" />
-        </context>
-    </template>
-    <template name="optional" value="@org.testng.annotations.Optional(&quot;$VARIABLE$&quot;)" description="TestNG Optional annotation" toReformat="true" toShortenFQNames="true">
-        <variable name="VARIABLE" expression="" defaultValue="&quot;variable&quot;" alwaysStopAt="true" />
-        <context>
-            <option name="JAVA_CODE" value="true" />
-        </context>
-    </template>
-    <template name="assertTrue" value="org.testng.Assert.assertTrue($VARIABLE$, &quot;$STRING_MESSAGE$&quot;);" description="TestNG Assert True" toReformat="true" toShortenFQNames="true">
+    <template name="test" value="@org.testng.annotations.Test($PARAM$ = &quot;$DESCRIPTION$&quot;)&#10;public void $TEST_NAME$() {&#10;    org.testng.Assert.$assertTrue$($VARIABLE$, &quot;$STRING_MESSAGE$&quot;);&#10;$END$&#10;}" description="TestNG Test method" toReformat="true" toShortenFQNames="true">
+        <variable name="PARAM" expression="" defaultValue="&quot;description&quot;" alwaysStopAt="true" />
+        <variable name="DESCRIPTION" expression="" defaultValue="&quot;test description&quot;" alwaysStopAt="true" />
+        <variable name="TEST_NAME" expression="" defaultValue="&quot;testName&quot;" alwaysStopAt="true" />
+        <variable name="assertTrue" expression="" defaultValue="&quot;assertTrue&quot;" alwaysStopAt="true" />
         <variable name="VARIABLE" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true" />
         <variable name="STRING_MESSAGE" expression="" defaultValue="&quot;String message&quot;" alwaysStopAt="true" />
         <context>
             <option name="JAVA_CODE" value="true" />
         </context>
     </template>
-    <template name="assertEquals" value="org.testng.Assert.assertEquals(&quot;$ACTUAL$&quot;, &quot;$EXPECTED$&quot;, &quot;$STRING_MESSAGE$&quot;);" description="TestNG Assert Equals" toReformat="true" toShortenFQNames="true">
+    <template name="beforeClass" value="@org.testng.annotations.BeforeClass&#10;public void $METHOD_NAME$(){&#10;    $END$&#10;}" description="TestNG BeforeClass annotation" toReformat="true" toShortenFQNames="true">
+        <variable name="METHOD_NAME" expression="" defaultValue="&quot;methodName&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="afterClass" value="@org.testng.annotations.AfterClass&#10;public void $METHOD_NAME$(){&#10;    $END$&#10;}" description="TestNG AfterClass annotation" toReformat="true" toShortenFQNames="true">
+        <variable name="METHOD_NAME" expression="" defaultValue="&quot;methodName&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="afterTest" value="@org.testng.annotations.AfterTest&#10;public void $METHOD_NAME$(){&#10;    $END$&#10;}" description="TestNG AfterTest annotation" toReformat="true" toShortenFQNames="true">
+        <variable name="METHOD_NAME" expression="" defaultValue="&quot;methodName&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="beforeTest" value="@org.testng.annotations.BeforeTest&#10;public void $METHOD_NAME$(){&#10;    $END$&#10;}" description="TestNG BeforeTest annotation" toReformat="true" toShortenFQNames="true">
+        <variable name="METHOD_NAME" expression="" defaultValue="&quot;methodName&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="dataProvider" value="@org.testng.annotations.DataProvider (name = &quot;$DATAPROVIDER_NAME$&quot;)&#10;public Object[][] dpMethod() {&#10;    return new Object [][] { $END$ };&#10;}" description="TestNG DataProvider" toReformat="true" toShortenFQNames="true">
+        <variable name="DATAPROVIDER_NAME" expression="" defaultValue="&quot;name_of_dataprovider&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="afterSuite" value="@org.testng.annotations.AfterSuite&#10;public void $METHOD_NAME$(){&#10;    $END$&#10;}" description="TestNG AfterSuite annotation" toReformat="true" toShortenFQNames="true">
+        <variable name="METHOD_NAME" expression="" defaultValue="&quot;methodName&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="beforeSuite" value="@org.testng.annotations.BeforeSuite&#10;public void $METHOD_NAME$(){&#10;    $END$&#10;}" description="TestNG BeforeSuite annotation" toReformat="true" toShortenFQNames="true">
+        <variable name="METHOD_NAME" expression="" defaultValue="&quot;methodName&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="afterGroups" value="@org.testng.annotations.AfterGroups&#10;public void $METHOD_NAME$(){&#10;    $END$&#10;}" description="TestNG AfterGroups annotation" toReformat="true" toShortenFQNames="true">
+        <variable name="METHOD_NAME" expression="" defaultValue="&quot;methodName&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="beforeGroups" value="@org.testng.annotations.BeforeGroups&#10;public void $METHOD_NAME$(){&#10;    $END$&#10;}" description="TestNG BeforeGroups annotation" toReformat="true" toShortenFQNames="true">
+        <variable name="METHOD_NAME" expression="" defaultValue="&quot;methodName&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="assertNotEquals" value="org.testng.Assert.assertNotEquals(&quot;$ACTUAL$&quot;, &quot;$EXPECTED$&quot;, &quot;$STRING_MESSAGE$&quot;);" description="TestNG Assert Not Equals" toReformat="true" toShortenFQNames="true">
         <variable name="ACTUAL" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
         <variable name="EXPECTED" expression="" defaultValue="&quot;expected&quot;" alwaysStopAt="true" />
         <variable name="STRING_MESSAGE" expression="" defaultValue="&quot;String message&quot;" alwaysStopAt="true" />
@@ -61,9 +130,24 @@
             <option name="JAVA_CODE" value="true" />
         </context>
     </template>
-    <template name="assertFalse" value="org.testng.Assert.assertFalse($VARIABLE$, &quot;$STRING_MESSAGE$&quot;);" description="TestNG Assert False" toReformat="true" toShortenFQNames="true">
-        <variable name="VARIABLE" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true" />
+    <template name="assertSame" value="org.testng.Assert.assertSame(&quot;$ACTUAL$&quot;, &quot;$EXPECTED$&quot;, &quot;$STRING_MESSAGE$&quot;);" description="TestNG Assert Same" toReformat="true" toShortenFQNames="true">
+        <variable name="ACTUAL" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+        <variable name="EXPECTED" expression="" defaultValue="&quot;expected&quot;" alwaysStopAt="true" />
         <variable name="STRING_MESSAGE" expression="" defaultValue="&quot;String message&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="assertNotSame" value="org.testng.Assert.assertNotSame(&quot;$ACTUAL$&quot;, &quot;$EXPECTED$&quot;, &quot;$STRING_MESSAGE$&quot;);" description="TestNG Assert Not Same" toReformat="true" toShortenFQNames="true">
+        <variable name="ACTUAL" expression="" defaultValue="&quot;actual&quot;" alwaysStopAt="true" />
+        <variable name="EXPECTED" expression="" defaultValue="&quot;expected&quot;" alwaysStopAt="true" />
+        <variable name="STRING_MESSAGE" expression="" defaultValue="&quot;String message&quot;" alwaysStopAt="true" />
+        <context>
+            <option name="JAVA_CODE" value="true" />
+        </context>
+    </template>
+    <template name="listenerClass" value="public class $CLASSNAME$ implements org.testng.ITestListener {&#10;    public void onStart(org.testng.ITestContext context) {&#10;        System.out.println(&quot;*** Test Suite &quot; + context.getName() + &quot; started ***&quot;);&#10;    }&#10;&#10;    public void onFinish(org.testng.ITestContext context) {&#10;        System.out.println(&quot;*** Test Suite &quot; + context.getName() + &quot; ending ***&quot;);&#10;    }&#10;&#10;    public void onTestStart(org.testng.ITestResult result) {&#10;        System.out.println(&quot;*** Running test method &quot; + result.getMethod().getMethodName());&#10;        String testClass = result.getTestClass().getName();&#10;    }&#10;&#10;    public void onTestSuccess(org.testng.ITestResult result) {&#10;        System.out.println(&quot;*** Executed &quot; + result.getMethod().getMethodName() + &quot; test successfully&quot;);&#10;    }&#10;&#10;    public void onTestFailure(org.testng.ITestResult result) {&#10;        System.out.println(&quot;*** Test execution &quot; + result.getMethod().getMethodName() + &quot; failed&quot;);&#10;    }&#10;&#10;    public void onTestSkipped(org.testng.ITestResult result) {&#10;        System.out.println(&quot;*** Test &quot; + result.getMethod().getMethodName() + &quot; skipped&quot;);&#10;    }&#10;&#10;    public void onTestFailedButWithinSuccessPercentage(org.testng.ITestResult result) {&#10;        System.out.println(&quot;*** Test failed but within percentage % &quot; + result.getMethod().getMethodName());&#10;    }&#10;}" description="TestNG all listener" toReformat="true" toShortenFQNames="true">
+        <variable name="CLASSNAME" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="false" />
         <context>
             <option name="JAVA_CODE" value="true" />
         </context>

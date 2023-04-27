@@ -13,17 +13,19 @@
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
-    <description><![CDATA[This plugin for IntelliJ of TestNG Snippets for Java is a tool designed to help developers write
-  tests more efficiently and quickly in Java projects that use TestNG as a testing framework. The plugin provides a
-  wide variety of predefined code snippets that cover TestNG annotations, test data configurations, common test cases,
-  assertions, and more.
-
-Users can easily select the relevant snippet and add it directly to their test code, saving time and reducing common
-syntax errors. Additionally, the plugin also offers autocomplete functions to suggest relevant snippets while writing
-test code, allowing developers to write more accurate and complete tests in less time.
-
-In summary, this TestNG Snippets plugin for IntelliJ is a valuable tool for any developer working with TestNG in Java
-projects, helping them increase efficiency and improve the quality of their tests.]]></description>
+    <description><![CDATA[
+    TestNG Snippets is a plugin for IntelliJ IDEA that provides a collection of useful code snippets for TestNG.
+      <br/>
+      <br/>
+      <strong>Instructions for Use:</strong>
+      To use TestNG Snippets, simply open a Java file in IntelliJ IDEA and start typing the prefix of the desired
+      snippet. The plugin will suggest the available snippets and insert the selected one when you press enter.
+      <br/>
+      <br/>
+      <strong>Example:</strong>
+      Type 'test' and select the 'Create a new TestNG test method' snippet to generate a new test method with
+      TestNG annotations.
+]]></description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->

@@ -40,9 +40,44 @@ Assert.assertTrue(true, "String message");
 }
 ```
 
-### After Method : `afterMethod`
+### Before Suite : `beforeSuite`
 ```javascript
-@AfterMethod
+@BeforeSuite
+public void methodName() {        
+}
+```
+
+### After Suite : `afterSuite`
+```javascript
+@AfterSuite
+public void methodName() {        
+}
+```
+
+### Before Test : `beforeTest`
+```javascript
+@BeforeTest
+public void methodName() {        
+}
+```
+
+### After Test : `afterTest`
+```javascript
+@AfterTest
+public void methodName() {        
+}
+```
+
+### Before Class : `beforeclass`
+```javascript
+@BeforeClass
+public void methodName() {        
+}
+```
+
+### After Class : `afterclass`
+```javascript
+@AfterClass
 public void methodName() {        
 }
 ```
@@ -50,6 +85,27 @@ public void methodName() {
 ### Before Method : `beforeMethod`
 ```javascript
 @BeforeMethod
+public void methodName() {        
+}
+```
+
+### After Method : `afterMethod`
+```javascript
+@AfterMethod
+public void methodName() {        
+}
+```
+
+### Before Groups : `beforeGroups`
+```javascript
+@BeforeGroups
+public void methodName() {        
+}
+```
+
+### After Groups : `afterGroups`
+```javascript
+@AfterGroups
 public void methodName() {        
 }
 ```
@@ -66,17 +122,40 @@ public void methodName() {
 
 ### Asset Equals : `assertEquals`
 ```javascript
-Assert.assertEquals("actual","expected","String message");
+Assert.assertEquals("actual", "expected", "String message");
+```
+
+### Asset Not Equals : `assertNotEquals`
+```javascript
+Assert.assertNotEquals("actual", "expected", "String message");
 ```
 
 ### Asset True : `assertTrue`
 ```javascript
-Assert.assertTrue(true,"String message");
+Assert.assertTrue(true, "String message");
 ```
 
 ### Asset False : `assertFalse`
 ```javascript
-Assert.assertFalse(false,"String message");
+Assert.assertFalse(false, "String message");
+```
+
+### Asset Same : `assertSame`
+```javascript
+Assert.assertSame("actual", "expected", "String message");
+```
+
+### Asset Not Same : `assertNotSame`
+```javascript
+Assert.assertNotSame("actual", "expected", "String message");
+```
+
+### Data Provider : `dataProvider`
+```javascript
+@DataProvider(name = "name_of_dataprovider")
+public Object[][] dpMethod() {        
+    return new Object[][]{};
+}
 ```
 
 ## License
