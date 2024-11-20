@@ -35,8 +35,6 @@
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
         <defaultLiveTemplates file="/liveTemplates/TestNG.xml"/>
-        <liveTemplateContext
-                id="TESTNG"
-                implementation="TestngContext"/>
+        <liveTemplateContext contextId="TESTNG" implementation="TestngContext"/>
     </extensions>
 </idea-plugin>
